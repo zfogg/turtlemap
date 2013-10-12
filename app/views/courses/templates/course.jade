@@ -1,0 +1,16 @@
+- var utils = this.require('lib/utils');
+- var qs = utils.qs.fromObjs([
+-   {"building.name"   : name},
+-   {"building.code"   : code},
+-   {"building.number" : number}
+- ]);
+
+td.course-name=name
+td.course-section=section
+td.course-type=type
+td.course-location
+  a.label.label-info(href="#buildings?number=#{building.number}")
+    =building.code
+    |  - 
+    =room
+

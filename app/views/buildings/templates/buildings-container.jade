@@ -1,0 +1,34 @@
+.panel-heading
+  .panel-title
+    h1.text-center
+      b Search
+      br
+      small Buildings
+  hr
+
+  p.lead Buildings look like this:
+  pre
+    code.prettyprint.lang-coffeescript.
+      {
+        name   : "Symons Hall" # Required
+        code   : "SYM"         # Optional
+        number : "076"         # Required
+        # ...
+      }
+
+.panel-body#building-search
+  form.form-inline(role="form")
+    .form-group
+      label.sr-only(for="#name-input") Name
+      input#name-input.form-control.query-input(
+        type="text", placeholder="Name", data-query='name')
+    .form-group
+      label.sr-only(for="#code-input") Code
+      input#code-input.form-control.query-input(
+        type="text", placeholder="Code", data-query='code')
+    .form-group
+      label.sr-only(for="#number-input") Number
+      input#number-input.form-control.query-input(
+        type="text", placeholder="Number", data-query='number')
+
+.buildings-container

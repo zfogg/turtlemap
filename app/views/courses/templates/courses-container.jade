@@ -1,0 +1,30 @@
+.panel-heading
+  .panel-title
+    h1.text-center
+      b Search
+      br
+      small Courses
+  hr
+
+  p.lead
+    | Courses look like this:
+  pre
+    code.prettyprint.lang-coffeescript.
+      {
+        name    : "UNIV100", # Required
+        section : "0101"     # Optional
+        # ...
+      }
+
+.panel-body#course-search
+  form.form-inline(role="form")
+    .form-group
+      label.sr-only(for="#name-input") Course name
+      input#name-input.form-control.query-input(
+        type="text", placeholder="Name", data-query='name')
+    .form-group
+      label.sr-only(for="#section-input") Course section
+      input#section-input.form-control.query-input(
+        type="text", placeholder="Section", data-query='section')
+
+.courses-container

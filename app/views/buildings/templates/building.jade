@@ -1,0 +1,11 @@
+- var utils = this.require('lib/utils');
+- var qs = utils.qs.fromObjs([
+-   {"name"   : name},
+-   {"code"   : code},
+-   {"number" : number}
+- ]);
+
+td
+  a(href="#buildings?"+qs)=name
+td=code
+td=number

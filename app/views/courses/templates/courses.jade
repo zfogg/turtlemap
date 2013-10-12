@@ -1,0 +1,36 @@
+table.table.table-striped
+  thead
+    tr
+      th(width='25%') Name
+      th(width='25%') Sect
+      th(width='25%') Type
+      th(width='25%') Location
+  tbody.list-courses
+
+.loading-collection.spinner
+
+.empty-collection.col-xs-12
+  .alert.alert-info
+    p.text-center
+      b No results to display. 
+      small Search or modify your existing search.
+
+    hr
+    h4 Search parameters
+
+    dl.dl-horizontal.row
+      dt
+        b.text-primary Name: 
+        span.text-muted required
+      dd
+        code /^.*\w{4,}.*$/i
+      dt
+        b.text-primary Section: 
+        span.text-muted optional
+      dd
+        code /^\d.*$/i
+
+    .space-b4
+      .label.label-info Note
+      span.text-muted  The search engine accepts regular expressions.
+    .clearfix

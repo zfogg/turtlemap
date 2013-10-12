@@ -1,0 +1,34 @@
+.navbar.navbar-inverse.navbar-fixed-top(rol="navigation")
+  .navbar-inner
+    .col-sm-5
+      button.navbar-toggle.btn.btn-default.navbar-btn(
+        type="button",
+        data-toggle="collapse",
+        data-target=".navHeaderCollapse")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      a.brand(href="/")
+        .h2#title TurtleMap
+          small#subtitle because TerpNav sucks
+
+        .clearfix
+
+    .col-sm-7.navHeaderCollapse-container
+      .collapse.navbar-collapse.navHeaderCollapse
+        ul.nav.navbar-nav.navbar-right.nav-pills
+
+          mixin navItem(link, textClass, text)
+            li.nav-link(
+              id="link-#{text.toLowerCase()}",
+              class=(link === activeLink ? 'active bold' : '')
+            )
+              a(href="#"+link)
+                span(class=textClass)
+                =' '+text
+
+          mixin navItem(''          , 'icon-home'   , 'Home')
+          mixin navItem('buildings' , 'icon-search' , 'Buildings')
+          mixin navItem('courses'   , 'icon-search' , 'Courses')
+          mixin navItem('profile'   , 'icon-user'   , 'Profile')

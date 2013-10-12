@@ -1,0 +1,20 @@
+!!! 5
+//if IE 8
+  html.no-js.lt-ie9(lang='en')
+// [if gt IE 8] <!
+html.no-js(lang='en')
+  // <![endif]
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    title Turtle Map
+    link(rel='stylesheet', href='/stylesheets/app.css')
+
+  body
+    script(src='/javascripts/vendor.js')
+    script(src='/javascripts/templates.js')
+    script(src='/javascripts/app.js')
+    script.
+      require('initialize');

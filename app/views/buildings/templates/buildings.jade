@@ -1,0 +1,40 @@
+table.table.table-striped
+  thead
+    tr
+      th(width='50%') Name
+      th(width='25%') Code
+      th(width='25%') Number
+  tbody.list-buildings
+
+.loading-collection.spinner
+
+.empty-collection.col-xs-12
+  .alert.alert-info
+    p.text-center
+      b No results to display. 
+      small Search or modify your existing search.
+
+    hr
+    h4 Search parameters
+
+    dl.dl-horizontal.row
+      dt
+        b.text-primary Name: 
+        span.text-muted optional
+      dd
+        code /^.*\w.*$/i
+      dt
+        b.text-primary Code: 
+        span.text-muted optional
+      dd
+        code /^.*\w{3}.*$/i
+      dt
+        b.text-primary Number: 
+        span.text-muted optional
+      dd
+        code /^.*\w{3,4}.*$/i
+
+    .space-b4
+      .label.label-info Note
+      span.text-muted  The search engine accepts regular expressions.
+    .clearfix
