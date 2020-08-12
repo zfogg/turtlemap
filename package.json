@@ -21,7 +21,7 @@
     "uglify-js-brunch": ">= 1.0 < 1.8",
     "clean-css-brunch": ">= 1.0 < 1.8",
     "auto-reload-brunch": ">= 1.0 < 1.8",
-    "express": "~3.4.0",
+    "express": "~4.17.1",
     "mongoose": "~3.6.19",
     "express-mongoose": "~0.1.0",
     "deferred": "~0.6.5",
